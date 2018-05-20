@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 export default class ApplianceCard extends Component {
+
   render() {
 
     const appliance = this.props.appliance;
@@ -9,9 +10,9 @@ export default class ApplianceCard extends Component {
     return(
       <div className="row appliance" key={key}>
         <div>
-          <img src={appliance.picture} className="appliance-image" alt={appliance.name}></img>
+          <img src={this.props.src} className="appliance-image" alt={this.props.alt}></img>
         </div>
-        <h4>{appliance.name}</h4>
+        <h4>{this.props.alt}</h4>
       </div>
     );
   }

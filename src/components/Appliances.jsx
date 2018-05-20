@@ -102,7 +102,8 @@ class Appliances extends Component {
           Object.keys(this.state.appliances).map(function (appliance, key) {
 
             return (
-              <ApplianceCard key={key} appliance={appliance} onClick={(e) => this.handleClick(e)} />
+              <ApplianceCard src={appliance.picture} key={key} appliance={appliance}
+                             alt={appliance.name} onClick={(e) => this.handleClick(e)} />
             );
           })
         }
