@@ -96,14 +96,10 @@ class Appliances extends Component {
 
   render(){
 
-    const appliances = this.state.appliances.dryer;
-
     return(
       <ul className="pull-right appliances">
         {
-          Object.keys(appliances).forEach(function(key) {
-
-            const appliance = appliances[key];
+          Object.keys(this.state.appliances).map(function (appliance, key) {
 
             return (
               <ApplianceCard key={key} appliance={appliance} onClick={(e) => this.handleClick(e)} />
